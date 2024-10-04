@@ -64,17 +64,22 @@ export default function Login() {
                 <Image
                     source={logoCromo} 
                     style={styles.logo}
+                    resizeMode="contain"
                 />
             </View>
-
+            <View style={styles.viewLabel}>
+                <Text style={styles.labelText}>E-mail</Text>
+            </View>
             <Input variant='outline' size='lg' style={styles.input}> 
                 <InputField onChangeText={(txt) => setUser({...user, email: txt})} 
-                placeholder='E-mail'/>
+                placeholder='Insira o e-mail institucional'/>
             </Input>
-
+            <View style={styles.viewLabel}>
+                <Text style={styles.labelText}>Senha</Text>
+            </View>
             <Input variant='outline' size='lg' style={styles.input}> 
                 <InputField onChangeText={(txt) => setUser({...user, senha: txt})} 
-                placeholder='Senha' type='password'/>
+                placeholder='Insira a senha' type='password'/>
             </Input>
             <Text style={{marginBottom: 25, color: "red"}}> {errLogin} </Text>
 
@@ -104,7 +109,19 @@ const styles = StyleSheet.create({
         backgroundColor: '#1a2224',
         alignItems: 'center',
         justifyContent: 'center',
-        padding: 16
+        padding: 16,
+    },
+    viewLabel: {
+        width: '100%',
+        alignItems: 'flex-start',
+        paddingLeft: 20,
+        marginBottom: 10,
+    },
+    labelText: {
+        fontSize: 25,
+        color: '#fff',
+        fontWeight: 'bold',
+        marginTop: 5,
     },
     viewLogo:{
         backgroundColor: '#fff',
@@ -121,14 +138,15 @@ const styles = StyleSheet.create({
     },
     input: {
         height: 40,
-        width: 330,
+        width: 340,
         borderColor: 'gray',
         fontWeight: 'bold',
         borderWidth: 1,
         marginBottom: 8,
-        marginTop: 8,
+        marginTop: 0,
         paddingHorizontal: 8,
-        backgroundColor: '#fff'
+        backgroundColor: '#fff',
+        borderRadius: 10,
       },
     button: {
         width: 155,

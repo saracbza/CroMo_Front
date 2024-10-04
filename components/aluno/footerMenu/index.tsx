@@ -1,9 +1,9 @@
 import React from 'react'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
 import { View } from 'react-native'
-import Home from '../../app/internA/pages/home'
-import Agendamentos from '../../app/internA/pages/agendamentos'
-import Profile from '../../app/internA/profile'
+import Home from '../../../app/internA/pages/home'
+import Agendamentos from '../../../app/internA/pages/agendamentos'
+import Profile from '../../../app/internA/profile'
 import { NavigationContainer } from '@react-navigation/native'
 import Ionicons from 'react-native-vector-icons/Ionicons'
 
@@ -28,7 +28,7 @@ export default function FooterMenu() {
     
                 return (
                   <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-                    <Ionicons name={iconName} size={44} color={'#cf1111'} />
+                    <Ionicons name={iconName as string} size={44} color={'#cf1111'} />
                   </View>
                 )
               },
@@ -55,7 +55,7 @@ export default function FooterMenu() {
           >
             <Screen name="Home" component={Home} options={{ title: '' }}/>
             <Screen name="Agendamentos" component={Agendamentos} />
-            <Screen name="Perfil" component={Profile}/>
+            <Screen name="Profile" component={Profile}/>
           </Navigator>
         </NavigationContainer>
       )

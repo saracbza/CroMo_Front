@@ -1,5 +1,5 @@
 import { View, StyleSheet, Text, ScrollView, Modal } from "react-native"
-import { Button, ButtonIcon, ButtonText } from "../ui/button"
+import { Button, ButtonIcon, ButtonText } from "../../ui/button"
 import { useState } from "react"
 import { EyeIcon, TrashIcon } from '@/components/ui/icon'
 

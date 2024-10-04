@@ -1,4 +1,4 @@
-import Monitorias from '@/components/monitorias'
+import Monitorias from '@/components/aluno/monitorias'
 import { Button, ButtonText } from '@/components/ui/button'
 import { router } from 'expo-router'
 import { useEffect, useState } from 'react'
@@ -16,6 +16,7 @@ export default function Home(){
     }
     
     useEffect(() => {
+        console.log(hoje)
         DiaDaSemana(hoje)
     }, [])
 

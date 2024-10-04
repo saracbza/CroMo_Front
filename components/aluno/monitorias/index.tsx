@@ -12,6 +12,7 @@ interface Monitoria {
 export default function Monitorias(){
     const [monitorias, setMonitorias] = useState<Monitoria[]>([])
     const hoje = new Date()
+
     async function loadMonitorias(){
     try{
         const resp = await fetch(`${API_URL}/monitoria/show`,{

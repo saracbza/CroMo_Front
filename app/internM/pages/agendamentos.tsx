@@ -7,10 +7,7 @@ export default function Agendamentos(){
         <SafeAreaView style={styles.container}>
             <Text style={[styles.title, {color: '#fff'}]}> Meus agendamentos </Text>
             <View style={styles.viewAgendamentos}>
-            <Agendamento key={1}
-                materia='Sem agendamento'
-                local='' horario='' data=''
-                obs='' dia_semana=''/> 
+                 {/*<Agendamentos /> */}
             </View>
         </SafeAreaView>
         

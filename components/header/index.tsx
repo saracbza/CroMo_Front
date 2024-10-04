@@ -20,7 +20,7 @@ export default function Header(){
                 const nomeUsuario = await AsyncStorage.getItem('nomeUsuario')
                 const cursoUsuario = await AsyncStorage.getItem('cursoUsuario')
                 const fotoId = await AsyncStorage.getItem('foto')
-                console.log(fotoId)
+
                 switch (fotoId) {
                     case '1':
                       setFotoPerfil(foto1); break
@@ -33,6 +33,8 @@ export default function Header(){
                 }
                 if (!(!nomeUsuario)) setNome(nomeUsuario)
                 if (!(!cursoUsuario)) setCurso(cursoUsuario)
+                if (!cursoUsuario) setCurso("Monitor")
+
             }catch (e) { 
                 console.error('Erro ao buscar dados do AsyncStorage', e)
             }
